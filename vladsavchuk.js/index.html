@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="public.js" defer></script>
+    <script src="funk.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Клікер Гра з Прокачкою та Автоматизацією</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        background-color: #f7f7f7;
+        transition: background-color 0.3s ease;
+      }
+      #coin-count {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #4caf50;
+      }
+      #click-button {
+        padding: 15px 30px;
+        font-size: 1.5em;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+      }
+      #click-button:hover {
+        background-color: #45a049;
+        transform: scale(1.1);
+      }
+      #upgrade-section {
+        margin-top: 20px;
+      }
+      .upgrade {
+        margin: 10px;
+        padding: 12px 25px;
+        font-size: 1.2em;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .upgrade:hover {
+        background-color: #ddd;
+      }
+      #offline-progress {
+        margin-top: 30px;
+        font-size: 1.2em;
+        color: #888;
+      }
+      .button-container {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Клікер Гра з Прокачкою</h1>
+    <div id="coin-count">Монет: 0</div>
+    <button id="click-button">Натискай мене!</button>
+
+    <div id="upgrade-section">
+      <h2>Покращення</h2>
+      <button class="upgrade" id="upgrade-1">
+        Автоматичний збір: +1 монета/сек (100 монет)
+      </button>
+      <button class="upgrade" id="upgrade-2">
+        Автоматичний збір: +5 монет/сек (500 монет)
+      </button>
+      <button class="upgrade" id="upgrade-click-power">
+        Покращити клік: +1 монета/клік (50 монет)
+      </button>
+    </div>
+
+    <div id="offline-progress">
+      <h3>Офлайн прогрес:</h3>
+      <p>
+        Монети за час, коли гра була закрита: <span id="offline-coins">0</span>
+      </p>
+    </div>
+
+    <div class="button-container">
+      <button class="upgrade" id="save-progress">Зберегти прогрес</button>
+      <button class="upgrade" id="load-progress">Завантажити прогрес</button>
+      <button class="upgrade" id="reset-progress">Скинути прогрес</button>
+    </div>
+  </body>
+</html>
